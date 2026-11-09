@@ -1,0 +1,6 @@
+{
+  "name": "Astro Explorer — Pizarra Interactiva del Blog",
+  "description": "Pizarra interactiva de nodos estilo Excalidraw, simulador y documentación en Markdown para aprender la arquitectura de un blog en Astro para GitHub Pages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

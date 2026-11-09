@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-hand: 'Caveat', cursive;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  --bg: #f8f8f6;
+  --grid-dot: #d2d2cc;
+  --card-bg: #ffffff;
+  --text-main: #18181b;
+  --text-muted: #64646e;
+  --border: #27272a;
+  --shadow: 4px 4px 0px rgba(0, 0, 0, 0.9);
+  --shadow-hover: 7px 7px 0px rgba(0, 0, 0, 0.9);
+  
+  --c-yellow: #fde047;
+  --c-pink: #f472b6;
+  --c-blue: #60a5fa;
+  --c-green: #4ade80;
+  --c-orange: #fb923c;
+  --c-purple: #c084fc;
+}
+
+.dark {
+  --bg: #121316;
+  --grid-dot: #2a2d36;
+  --card-bg: #1c1e24;
+  --text-main: #f4f4f5;
+  --text-muted: #a1a1aa;
+  --border: #4b5263;
+  --shadow: 4px 4px 0px rgba(0, 0, 0, 0.95);
+  --shadow-hover: 6px 6px 0px rgba(0, 0, 0, 0.95);
+}
+
+/* Background canvas dot grid */
+.canvas-grid {
+  background-color: var(--bg);
+  background-image: radial-gradient(var(--grid-dot) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Connector animated dash */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+.wire-animated {
+  stroke-dasharray: 6 6;
+  animation: dash 35s linear infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
